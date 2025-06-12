@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import DifficultySelector from "./components/DifficultySelector/DifficultySelector";
+import Game from "./components/Game/Game";
+import MusicPlayer from "./components/MusicPlayer/MusicPlayer";
+import QuestionCard from "./components/QuestionCard/QuestionCard";
+import "./App.css";
 
 function App() {
+  const [difficulty, setDifficulty] = useState(null);
+  const [score, setScore] = useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <MusicPlayer />
+      {!difficulty ? (
+        <DifficultySelector setDifficulty={setDifficulty} />
+      ) : (
+        <Game
+          difficulty={difficulty}
+          score={score}
+          setScore={setScore}
+          setDifficulty={setDifficulty}
+        />
+      )}
     </div>
   );
 }

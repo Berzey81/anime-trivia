@@ -1,0 +1,83 @@
+/* Game.css */
+.game-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  color: white;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+  padding: 0 10px;
+}
+
+.timer {
+  color: #ff5722;
+  font-weight: bold;
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.7;
+  }
+}
+
+.game-end-screen {
+  text-align: center;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
+  max-width: 500px;
+  margin: 50px auto;
+}
+
+.game-end-screen h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ff5722;
+}
+
+.game-end-screen p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.game-end-screen button {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.game-end-screen button:hover {
+  background: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .game-container {
+    padding: 15px;
+  }
+
+  .game-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+}
