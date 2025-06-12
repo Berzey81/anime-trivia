@@ -2,19 +2,21 @@
   position: fixed;
   top: 20px;
   right: 20px;
-  background: rgba(0, 0, 0, 0.7);
+  background:black;
   padding: 10px 15px;
   border-radius: 30px;
   display: flex;
   gap: 10px;
   align-items: center;
   z-index: 100;
+  color:azure;
 }
 
 .music-player button {
-  background: #ff5722;
+  background: red;
   border: none;
   padding: 5px 10px;
   border-radius: 20px;
   cursor: pointer;
+  color:azure;
 }
